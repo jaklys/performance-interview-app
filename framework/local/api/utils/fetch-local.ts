@@ -17,7 +17,7 @@ const fetchGraphqlApi: (getConfig: () => LocalConfig) => GraphQLFetcher =
         query,
         variables,
       }),
-    })
+    } as any)
 
     const json = await res.json()
     if (json.errors) {
