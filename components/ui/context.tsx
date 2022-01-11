@@ -201,8 +201,6 @@ export const UIProvider: FC = (props) => {
   return <UIContext.Provider value={value} {...props} />
 }
 
-UIProvider.displayName = "UIProvider";
-
 export const useUI = () => {
   const context = React.useContext(UIContext)
   if (context === undefined) {
@@ -216,5 +214,3 @@ export const ManagedUIContext: FC = ({ children }) => (
     <ThemeProvider>{children}</ThemeProvider>
   </UIProvider>
 )
-
-ManagedUIContext.displayName = "ManagedUIContext";
