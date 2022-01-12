@@ -22,7 +22,7 @@ export default function Slug() {
         variables: { slug }
       });
 
-      await fetch(`https://httpstat.us/403?sleep=${Math.floor(Math.random() * 1000)}`)
+      await fetch(`/api/test`)
 
       const { products: relatedProducts } = await commerce.getAllProducts({
         variables: { first: 4 },
